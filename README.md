@@ -67,4 +67,5 @@ The script will:
 
 ## Author
 Dmytro Shpak  
-Open to Data Science / ML roles
+Open to Junior Data Engineer role
+
