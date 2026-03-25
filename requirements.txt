@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+scikit-learn
+lightgbm
+google-cloud-bigquery
+db-dtypes
+imbalanced-learn
+shap
