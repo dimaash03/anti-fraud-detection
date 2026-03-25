@@ -15,7 +15,7 @@ End‑to‑end fraud detection project built for a real‑world competition setu
 - Fraud rate in training: 3.83%
 
 ## Data
-Raw data is not included in this repository due to size and privacy.  
+Raw data is not included in this repository due to size and privacy.
 Expected tables in BigQuery:
 - fraud_detection.train_users
 - fraud_detection.train_transactions
@@ -35,11 +35,11 @@ Python, pandas, scikit‑learn, LightGBM, BigQuery (GCP), GCS
     pip install -r requirements.txt
     ```
 
-2. Set GCP project and dataset in the script
+2. Set GCP project and dataset (environment variables)
 
-    ```python
-    PROJECT = "your-project-id"
-    DATASET = "fraud_detection"
+    ```bash
+    export PROJECT_ID="your-project-id"
+    export DATASET_ID="fraud_detection"
     ```
 
 3. Run the pipeline
@@ -59,6 +59,7 @@ The script will:
 - src/anti_fraud_pipeline.py — full pipeline (feature engineering → training → submission)
 - notebooks/ — exploratory analysis and experiments
 - reports/ — charts, metrics, and artifacts
+- docs/ — problem statement (if sharing is allowed)
 
 ## Future Improvements
 - Hyperparameter tuning with Optuna
@@ -66,6 +67,5 @@ The script will:
 - Explainability dashboard (SHAP)
 
 ## Author
-Dmytro Shpak  
+Dmytro Shpak
 Open to Junior Data Engineer role
-

@@ -7,3 +7,4 @@ google-cloud-bigquery
 db-dtypes
 imbalanced-learn
 shap
+matplotlib
