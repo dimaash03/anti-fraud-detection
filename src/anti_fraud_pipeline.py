@@ -489,6 +489,20 @@ print("\nГенерація submission...")
 model_submit = LGBMClassifier(**best_params)
 model_submit.fit(X, y)
 
+# Feature importance plot
+imp = pd.DataFrame({
+    "feature": feature_cols,
+    "importance": model_submit.feature_importances_,
+}).sort_values("importance", ascending=True)
+
+plt.figure(figsize=(8, 10))
+plt.barh(imp["feature"].tail(25), imp["importance"].tail(25))
+plt.title("Feature Importance (Top 25)")
+plt.xlabel("Importance")
+plt.tight_layout()
+plt.savefig("reports/feature_importance.png", dpi=150)
+plt.close()
+
 test_probas_final = model_submit.predict_proba(X_test)[:, 1]
 test_predictions  = (test_probas_final >= best_threshold).astype(int)
 
